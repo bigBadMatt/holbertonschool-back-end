@@ -20,9 +20,9 @@ if __name__ == '__main__':
         todos = requests.get(todo_url, params={"userId": user_id}).json()
         user_todos = [
             {"username": user["username"],
-            "task": todo["title"],
-            "completed": todo["completed"]}
-                for todo in todos]
+             "task": todo["title"],
+             "completed": todo["completed"]}
+            for todo in todos]
         data[user_id] = user_todos
 
     with open("{}.json".format(user_id), mode='w') as json_file:
