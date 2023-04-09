@@ -9,8 +9,9 @@ import requests
 
 if __name__ == '__main__':
 
-    user_url= 'https://jsonplaceholder.typicode.com/users{}'.format(sys.argv[1])
-    todo_url= 'https://jsonplaceholder.typicode.com/todos'
+    user_url =
+    'https://jsonplaceholder.typicode.com/users{}'.format(sys.argv[1])
+    todo_url = 'https://jsonplaceholder.typicode.com/todos'
 
     todo_list = requests.get(
         todo_url,
