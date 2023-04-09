@@ -3,13 +3,13 @@
 given employee ID, returns information about his/her TODO list progress
 """
 
-import sys
 import requests
+import sys
 
 
 if __name__ == '__main__':
 
-    user_url = "https://jsonplaceholder.typicode.com/users{}"\
+    user_url = "https://jsonplaceholder.typicode.com/users/{}"\
         .format(sys.argv[1])
     todo_url = 'https://jsonplaceholder.typicode.com/todos'
 
@@ -26,7 +26,7 @@ if __name__ == '__main__':
         }
     ).json()
 
-    EMPLOYEE_NAME = requests.get(user_url).json()
+    EMPLOYEE_NAME = requests.get(user_url).json().get("name")
     TOTAL_NUMBER_OF_TASKS = len(todo_list)
     NUMBER_OF_DONE_TASKS = len(completed_todo)
 
