@@ -19,17 +19,7 @@ if __name__ == '__main__':
         params={"userId": sys.argv[1]}
     ).json()
 
-    completed_todo = requests.get(
-        todo_url,
-        params={
-            'completed': 'true',
-            'userId': sys.argv[1]
-        }
-    ).json()
-
-    user_name = requests.get(user_url).json().get("name")
-    TOTAL_NUMBER_OF_TASKS = len(todo_list)
-    NUMBER_OF_DONE_TASKS = len(completed_todo)
+    user_name = requests.get(user_url).json().get("username")
 
     with open("{}.csv".format(user_id), mode='w') as csv_file:
         writer = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
