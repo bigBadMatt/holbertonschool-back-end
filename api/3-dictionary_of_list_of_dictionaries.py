@@ -25,6 +25,6 @@ if __name__ == '__main__':
             for todo in todos]
         data[user_id] = user_todos
 
-    with open("todo_all_employees.json".format(user_id), mode='w')\
-        as json_file:
+    with open("todo_all_employees.json"\
+              .format(user_id), mode='w') as json_file:
         json.dump(data, json_file)
