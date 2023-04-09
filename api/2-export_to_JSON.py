@@ -24,9 +24,9 @@ if __name__ == '__main__':
     data = {
         user_id: [
             {
-                "task":task['title'],
-                "completed":task['completed'],
-                "username":user_name
+                "task": task['title'],
+                "completed": task['completed'],
+                "username": user_name
             }
             for task in todo_list
         ]
